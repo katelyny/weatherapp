@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>Exercise Three</title>
+        <link rel="stylesheet" href="css/weather-style.css">
+        <link rel="stylesheet" href="css/weather-icons.min.css">
+        <link rel="stylesheet" href="css/custom/all.css">
+        <link rel="stylesheet" href="css/kendo.mobile.flat.min.css">
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/all.css">
+    </head>
+    <body>
+        
+        <div data-role="view" data-layout="default" id="home" data-title="WeatherApp">
+          <main>
+            <section class="location">
+                <div class="location__left">
+                    <h2> Location</h2>
+                    <p id="current-city" style="text-transform: capitalize">Lethbridge</p>
+                </div>
+                <div class="location__right">
+                    <span id="description"></span>
+                    <br>
+                    <i class="wi wi-cloudy"></i>
+                    <br>
+                </div>
+            </section>
+            <section id="current-temp">
+                <h2>Current Temperature</h2>
+                <h1><span id="temp"></span></h1>
+            </section>
+            <div data-role="scrollview" data-align="center">
+                <div data-role="page" class="more">
+                    <i class="wi wi-thermometer"></i>
+                    <p>max.<br>temp</p>
+                    <span id="maxtemp"></span>
+                </div>
+                <div data-role="page" class="more">
+                    <i class="wi wi-thermometer-exterior"></i>
+                    <p>min.<br>temp</p>
+                    <span id="mintemp"></span>
+                </div>
+                <div data-role="page" class="more">
+                    <i class="wi wi-strong-wind"></i>
+                    <p>wind</p>
+                    <span id="wind"></span>
+                </div>
+                <div data-role="page" class="more">
+                    <i class="wi wi-humidity"></i>
+                    <p>humidity</p>
+                    <span id="humidity"></span>
+                </div>
+            </div>
+        </main>
+        </div>
+        
+        <div data-role="drawer" id="left-drawer" data-position="left">
+            <header data-role="header">
+                  <div data-role="navbar" id="left-nav">
+                </div>
+            </header>
+                <div id="settings">
+                    <ul data-role="listview">
+                        <li>
+                            <p>Change Location:</p>
+                            <input id="change_location" value="city" onfocus="this.value=''" name="city" />
+                            <button id="submit" >submit</button>
+                        </li>
+
+                    </ul>
+                </div>
+        </div>
+            
+        <section data-role="layout" data-id="default">
+        
+            <!--Layout inside here-->
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a href="#left-drawer" data-rel="drawer" data-role="button" data-align="left" data-icon="drawer-icon"></a>
+                    <span data-role="view-title">WeatherApp</span>
+                </div>
+            </header>
+            
+            
+            
+            <footer data-role="footer">
+                <p>Background: Layerface - Freepik</p>
+            </footer>
+        </section>
+        
+        <script type="text/javascript" src="js/weatherapp.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>       
+        <script type="text/javascript" src="js/kendo.ui.core.min.js"></script>
+        <script> 
+            var app = new kendo.mobile.Application();
+        </script>
+        <script>
+            var app = new kendo.mobile.Application(
+                document.body, {skin: "flat"};)
+        </script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>

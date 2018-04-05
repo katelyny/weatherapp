@@ -1,0 +1,157 @@
+@font-face {
+    font-family: Muli; 
+    src: url(../font/Muli/Muli-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0px;    
+}
+
+body{
+    background-image: url("../imgs/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    margin: 8.5%;
+}
+
+.km-view-title{
+    border-bottom: 1px solid lightgrey;
+}
+
+.km-view-title span {
+    color: #F1671D;
+    font-weight: bold;
+
+}
+
+h1{
+    font-family:Muli;
+    font-size: 2.250em;
+}
+
+h2{
+    font-family: Muli;
+    font-size: 1.250em;
+    color: #595959;
+}
+
+p, span{
+    font-family: Muli;
+    font-size: 1.125em;
+    color: grey;
+    line-height: 1.125em;
+}
+
+.location .wi{
+    color: #7183DE;
+    font-size: 2.5em;
+}
+
+.location {
+    margin: 6.5%;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.5%;
+}
+
+.location__left h2, .location__left p{
+    margin-left:0;
+}
+
+.location__right{
+    padding-top: 20px;
+    text-align: right;
+}
+
+.location__right #description {
+    text-transform: capitalize;
+    line-height: 1.4em;
+}
+
+#current-temp{
+    text-align: center;
+    height: 100px;
+}
+
+span#temp {
+    color:#7183DE;
+}
+
+section#current-temp{
+    margin-bottom: 30px;
+}
+
+.km-widget.k-widget.k-scrollview.km-scrollview{
+    background: white; 
+    border-radius: 5px;
+}
+
+.more{
+    text-align: center;
+    padding-top:8%;
+}
+
+.more .wi{
+    font-size: 2.5em;
+    color: #57DBC6;
+}
+
+.more p, .more span {
+    color: #a3a3a3;
+}
+
+ol.k-pages.km-pages{
+    padding-bottom: 15%;
+    padding-top: 3%;
+
+}
+
+div#left-drawer{
+    background:#a3a3a3;
+}
+
+#left-drawer{
+    color:white;
+}
+
+#left-nav{
+    background: #57DBC6;
+}
+
+
+#left-drawer p{
+    color:white;
+    margin-left:0;
+}
+
+.km-widget.km-listview.km-list{
+    padding: 5%;
+    border-top: 2px solid white;
+}
+
+input#change_location {
+    color:lightgrey;
+    padding-left: 5px;
+    border: 2px solid white;
+}
+
+button#submit {
+    font-family: muli;
+    color: white;
+    padding: 3%;
+    margin-top: 8%;
+    background: #7183DE;
+}
+
+footer p{
+    text-align: center;
+}
